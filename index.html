@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Improving Densification in 3D Gaussian Splatting for High-Fidelity Rendering.">
+  <meta name="keywords" content="3DGS, Densification, High-Fidelity">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Improving Densification in 3D Gaussian Splatting for High-Fidelity Rendering</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <!-- Font Awesome & Academicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <!-- Bulma Framework and Plugins -->
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Font Awesome JS (deferred) -->
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+  <!-- Bulma Plugins -->
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <link rel="stylesheet" href="./static/css/bootstrap-4.4.1.css">
+  <link rel="stylesheet" href="./static/css/dics.original.css">
+  <script src="./static/js/event_handler.js"></script>
+  <script src="./static/js/dics.original.js"></script>
+
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Improving Densification in 3D Gaussian Splatting for High-Fidelity Rendering</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><a href="https://github.com/XiaoBin2001">Xiaobin Deng</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+              Changyu Diao</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+              Min Li</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+              Ruohan yu</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+              Duanqing Xu</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Zhejiang University</span>
+            </div>
+
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/XiaoBin2001/Imporved-GS" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Abstract -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Although 3D Gaussian Splatting (3DGS) has achieved im-pressive performance in real-time rendering, its densification strategy often results in suboptimal reconstruction quality.
+              In this work, we present a comprehensive improvement to the densification pipeline of 3DGS from three perspectives: when to densify, how to densify, and how to mitigate overfitting.
+              Specifically, we propose an Edge-Aware Score to effectively select candidate Gaussians for splitting.
+              We further introduce a Long-Axis Split strategy that reduces geometric distortions introduced by clone and split operations.
+              To address over-fitting, we design a set of techniques, including Recovery-Aware Pruning, Multi-step Update, and Growth Control.
+              Our method enhances rendering fidelity without introducing addi-tional training or inference overhead, achieving state-of-the-art performance with fewer Gaussians.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Experiments</h2>
+          <div class="content has-text-justified">
+            <img src="imporved-gs-web/static/images/quantitative.png" alt="Quantitative">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Compare</h2>
+          <div class="container">
+            <ul class="nav nav-tabs nav-fill nav-justified" id="compare-1">
+                <li class="nav-item">
+                    <a class="nav-link active" onclick="CompareEvent(0)">Bicycle</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="CompareEvent(1)">Flowers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="CompareEvent(2)">Garden</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="CompareEvent(3)">Stump</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="CompareEvent(4)">Treehill</a>
+                </li>
+            </ul>
+
+            <ul class="nav nav-tabs nav-fill nav-justified" id="compare-2">
+                <li class="nav-item">
+                    <a class="nav-link" onclick="CompareEvent(5)">Bonsai</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="CompareEvent(6)">Counter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="CompareEvent(7)">Kitchen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="CompareEvent(8)">Room</a>
+                </li>
+            </ul>
+
+            <ul class="nav nav-tabs nav-fill nav-justified" id="compare-3">
+                <li class="nav-item">
+                    <a class="nav-link" onclick="CompareEvent(9)">Playroom</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="CompareEvent(10)">Drjohnson</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="CompareEvent(11)">Train</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="CompareEvent(12)">Truck</a>
+                </li>
+            </ul>
+
+            <div class="b-dics">
+                <img src="imporved-gs-web/static/images/bicycle/3dgs.png" alt="3DGS">
+                <img src="imporved-gs-web/static/images/bicycle/ours.png" alt="Ours">
+                <img src="imporved-gs-web/static/images/bicycle/gt.png" alt="GT">
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>      
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">More Result</h2>
+          <div class="content has-text-justified">
+            <img src="imporved-gs-web/static/images/qualitative/bicycle_01.png">
+            <img src="imporved-gs-web/static/images/qualitative/flowers_01.png">
+            <img src="imporved-gs-web/static/images/qualitative/garden_01.png">
+            <img src="imporved-gs-web/static/images/qualitative/stump_01.png">
+            <img src="imporved-gs-web/static/images/qualitative/treehill_01.png">
+            <img src="imporved-gs-web/static/images/qualitative/bonsai_01.png">
+            <img src="imporved-gs-web/static/images/qualitative/counter_01.png">
+            <img src="imporved-gs-web/static/images/qualitative/kitchen_01.png">
+            <img src="imporved-gs-web/static/images/qualitative/room_01.png">
+            <img src="imporved-gs-web/static/images/qualitative/playroom_01.png">
+            <img src="imporved-gs-web/static/images/qualitative/drjohnson_01.png">
+            <img src="imporved-gs-web/static/images/qualitative/train_01.png">
+            <img src="imporved-gs-web/static/images/qualitative/truck_01.png">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- BibTeX -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{
+}</code></pre>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="https://arxiv.org"><i class="fas fa-file-pdf"></i></a>
+        <a class="icon-link" href="https://github.com/XiaoBin2001/Imporved-GS"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+              This webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. 
+              The image comparison with sliding bar is from <a href="https://research.nvidia.com/labs/dir/neuralangelo/">Neuralangelo</a>. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
